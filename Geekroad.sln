@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31829.152
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geekroad", "Geekroad\Geekroad.csproj", "{9C03392F-97DB-47CA-887D-3CD54E692BBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geekroad", "Geekroad\Geekroad.csproj", "{9C03392F-97DB-47CA-887D-3CD54E692BBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
