@@ -1,7 +1,7 @@
 ﻿@using Geekroad.Storage.Entity
 @model ICollection<ArticleProto>
     @{
-    ViewData["Title"] = "GeekRoad - Домашняя";
+    ViewData["Title"] = "GeekRoad";
     }
 
     <h1>Статьи</h1>
@@ -16,9 +16,8 @@
             <div class="card-body">
                 <h5 class="card-title">@article.Name</h5>
                 <p class="card-text">@article.ShortText</p>
-                <p class="card-text">@article.Author.Nickname</p>
-                <p class="card-text">@article.Id</p>
-                <a href="" class="btn btn-primary">Читать далее...</a>
+                <p class="card-text">Автор статьи: @article.Author.Nickname</p>
+                @Html.ActionLink("Читать далее","Page", "Article", new { articleId=article.Id }, new { @class = "btn btn-success btn-sm glyphicon glyphicon-remove" })
             </div>
         </div>
         }

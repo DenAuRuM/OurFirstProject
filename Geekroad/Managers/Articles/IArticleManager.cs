@@ -10,7 +10,7 @@ namespace Geekroad.Managers.Articles
     {
         ICollection<ArticleProto> GetAll();
         ICollection<ArticleProto> GetArticleByAuthor(Guid authorId);
-
+        ICollection<ArticleProto> GetArticleById(Guid Id);
         void Delete(Guid ArticleId); 
     }
 }

@@ -34,5 +34,13 @@ namespace Geekroad.Managers.Articles
         {
             return _context.Articles.Where(art => art.Author.Id == authorId).ToList();
         }
+
+
+        public ICollection<ArticleProto> GetArticleById(Guid Id)
+        {
+            return _context.Articles.Where(art => art.Id == Id).ToList();
+        }
     }
+
+
 }

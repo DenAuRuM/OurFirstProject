@@ -23,9 +23,10 @@ namespace Geekroad.Controllers
             return View(articles);
         }
 
-        public IActionResult Article(Guid articleId)
+        public IActionResult Page(Guid articleId)
         {
-            return View(articleId);
+            var article = _manager.GetArticleById(articleId);
+            return View(article);
         }
     }
 }
