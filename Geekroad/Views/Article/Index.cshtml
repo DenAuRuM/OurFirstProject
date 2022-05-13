@@ -1,24 +1,29 @@
 ﻿@using Geekroad.Storage.Entity
-@model ICollection<ArticleProto>
-    @{
+@model ICollection<Article>
+@{
     ViewData["Title"] = "GeekRoad";
+}
+
+<h1 m>Статьи</h1>
+
+<style>
+    body {
+        background-image: url("background_image.jpg");
     }
+</style>
 
-    <h1>Статьи</h1>
+<div>
 
-
-    <div>
-
-        @foreach (var article in Model)
-        {
+    @foreach (var article in Model)
+    {
         <div class="card" style="width: 100%;">
             <img class="card-img-top" src="https://picsum.photos/2000/500" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">@article.Name</h5>
                 <p class="card-text">@article.ShortText</p>
                 <p class="card-text">Автор статьи: @article.Author.Nickname</p>
-                @Html.ActionLink("Читать далее","Page", "Article", new { articleId=article.Id }, new { @class = "btn btn-success btn-sm glyphicon glyphicon-remove" })
+                @Html.ActionLink("Читать далее", "Page", "Article", new { articleId = article.Id }, new { @class = "btn btn-success btn-sm glyphicon glyphicon-remove" })
             </div>
         </div>
-        }
-    </div>
+    }
+</div>

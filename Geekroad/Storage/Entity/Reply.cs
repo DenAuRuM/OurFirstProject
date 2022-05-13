@@ -5,23 +5,20 @@ using System.Threading.Tasks;
 
 namespace Geekroad.Storage.Entity
 {
-    public class ArticleProto
+    public class Reply
     {
         public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string ShortText { get; set; }
         public string Text { get; set; }
+
         public string Date;
-        public UserProto Author { get; set; }
-        public ArticleProto(Guid id, string name, string shorttext, string text, UserProto author)
+        public User Author { get; set; }
+
+        public Reply(Guid id, string name, string shorttext, string text, User author)
         {
             Id = id;
-            Name = name;
-            ShortText = shorttext;
             Text = text;
             Author = author;
             Date = DateTime.Now.ToString();
         }
-
     }
 }

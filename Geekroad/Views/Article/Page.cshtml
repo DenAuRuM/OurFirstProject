@@ -1,14 +1,21 @@
 ﻿@using Geekroad.Storage.Entity
-@model ICollection<ArticleProto>
+@model ICollection<Article>
     @foreach (var article in Model)
     {
-    ViewData["Title"] = "GR - "+@article.Name;
+        ViewData["Title"] = "GR - " + @article.Name;
     }
 
     @foreach (var article in Model)
     {
-    <h1>@article.Name</h1>
+        <h1>@article.Name</h1>
     }
+
+    <style>
+        body {
+            background-image: url("background_image.jpg");
+        }
+    </style>
+
 
     <div>
 

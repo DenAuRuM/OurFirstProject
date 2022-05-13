@@ -25,18 +25,18 @@ namespace Geekroad.Managers.Articles
                 _context.Articles.Remove(article);
         }
 
-        public ICollection<ArticleProto> GetAll()
+        public ICollection<Article> GetAll()
         {
             return _context.Articles;
         }
 
-        public ICollection<ArticleProto> GetArticleByAuthor(Guid authorId)
+        public ICollection<Article> GetArticleByAuthor(Guid authorId)
         {
             return _context.Articles.Where(art => art.Author.Id == authorId).ToList();
         }
 
 
-        public ICollection<ArticleProto> GetArticleById(Guid Id)
+        public ICollection<Article> GetArticleById(Guid Id)
         {
             return _context.Articles.Where(art => art.Id == Id).ToList();
         }

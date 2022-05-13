@@ -8,9 +8,9 @@ namespace Geekroad.Managers.Articles
 {
     public interface IArticleManager
     {
-        ICollection<ArticleProto> GetAll();
-        ICollection<ArticleProto> GetArticleByAuthor(Guid authorId);
-        ICollection<ArticleProto> GetArticleById(Guid Id);
+        ICollection<Article> GetAll();
+        ICollection<Article> GetArticleByAuthor(Guid authorId);
+        ICollection<Article> GetArticleById(Guid Id);
         void Delete(Guid ArticleId); 
     }
 }
