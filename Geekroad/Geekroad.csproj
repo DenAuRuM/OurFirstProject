@@ -1,12 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Storage\Images\" />
-    <Folder Include="ViewModels\" />
+    <Compile Remove="Storage\Images\**" />
+    <Compile Remove="ViewModels\**" />
+    <Content Remove="Storage\Images\**" />
+    <Content Remove="ViewModels\**" />
+    <EmbeddedResource Remove="Storage\Images\**" />
+    <EmbeddedResource Remove="ViewModels\**" />
+    <None Remove="Storage\Images\**" />
+    <None Remove="ViewModels\**" />
   </ItemGroup>
 
   <ItemGroup>
