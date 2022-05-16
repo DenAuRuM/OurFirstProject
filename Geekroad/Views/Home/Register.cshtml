@@ -1,0 +1,31 @@
+﻿<style>
+    body {
+        background-image: url("/background_image.jpg");
+    }
+</style>
+
+<div style="width: 100%; text-align: center;vertical-align: center">
+    <h1 style="margin: 75px">Зарегистрироваться</h1>
+</div>
+
+<form autocomplete="on" >
+    <p class="mb-3">
+        <input type="text" class="form-control" id="LoginInput1" placeholder="Логин">
+    </p>
+    <p class="mb-3">
+        <input type="email" class="form-control" id="EmailInput" placeholder="Почта">
+    </p>
+    <p class="mb-3">
+        <input type="password" class="form-control" id="PasswordInput" placeholder="Пароль">
+    </p>
+    Добавьте аватарку!
+    <p><input type="file" name="photo" multiple accept="image/jpeg,image/png">
+    <p class="register_button">
+        <input type="submit" value="Зарегистрироваться" />
+    </p>
+    
+    <p class="change_link">
+        Уже есть аккаунт?
+        <a class="nav-link" style="font-size: 20px; color: #8265a7;" asp-area="" asp-controller="Home" asp-action="Login">Войти</a>
+    </p>
+</form>

@@ -1,0 +1,26 @@
+﻿<style>
+    body {
+        background-image: url("/background_image.jpg");
+    }
+</style>
+
+<div style="width: 100%; text-align: center;vertical-align: center">
+    <h1 style="margin: 75px">Войти</h1>
+</div>
+
+<form autocomplete="on" >
+    <p class="mb-3" >
+        <input type="text" class="form-control" id="LoginInput1" placeholder="Логин">
+    </p>
+    <p class="mb-3">
+        <input type="password" class="form-control" id="PasswordInput" placeholder="Пароль">
+    </p>
+    <p class="login button">
+        <input type="submit" value="Войти" />
+    </p>
+    
+    <p class="change_link">
+        Нет аккаунта?
+        <a class="nav-link" style="font-size: 20px; color: #8265a7;" asp-area="" asp-controller="Home" asp-action="Register">Зарегистрироваться</a>
+    </p>
+</form>
