@@ -1,4 +1,4 @@
-namespace GameCafe.Models
+namespace GameCafe.Storage.Entity
 {
     public class ErrorViewModel
     {

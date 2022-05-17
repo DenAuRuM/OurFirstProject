@@ -1,4 +1,4 @@
-﻿using GameCafe.Models;
+﻿using GameCafe.Storage.Entity;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
