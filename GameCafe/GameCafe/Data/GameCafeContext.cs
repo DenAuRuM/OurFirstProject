@@ -26,7 +26,6 @@ namespace GameCafe.Data
         public DbSet<GameCafe.Storage.Entity.Tariff> Tariffs { get; set; }
         public DbSet<GameCafe.Storage.Entity.Videogame> Videogames { get; set; }
         public DbSet<GameCafe.Storage.Entity.VideoGameGenre> VideoGameGenres { get; set; }
-        public DbSet<GameCafe.Storage.Entity.VGame_Genre_connection> vGame_Genre_Connections { get; set; }
 
     }
 }

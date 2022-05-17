@@ -1,0 +1,8 @@
+﻿@model IEnumerable<GameCafe.Storage.Entity.Review>
+Спасибо за отзыв!
+@{
+    foreach (var item in Model)
+    {
+        <br>
+        @item.Text
+    } }
