@@ -1,6 +1,5 @@
 ﻿using GameCafe.Data;
 using GameCafe.Storage.Entity;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GameCafe.Controllers
@@ -14,7 +13,7 @@ namespace GameCafe.Controllers
             _context = context;
         }
 
-        // GET: ReviewController
+        
         public ActionResult Index()
         {
             return View(_context.Reviews.ToList());
