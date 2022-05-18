@@ -50,7 +50,7 @@ namespace GameCafe.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Price = table.Column<int>(type: "int", nullable: false),
                     Volume = table.Column<double>(type: "float", nullable: false),
-                    isAlcohol = table.Column<bool>(type: "bit", nullable: false)
+                    Sparkling = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -117,7 +117,7 @@ namespace GameCafe.Migrations
                     DayTime = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IsSnacks = table.Column<bool>(type: "bit", nullable: false),
                     IsDrink = table.Column<bool>(type: "bit", nullable: false),
-                    IsAlcoholDrink = table.Column<bool>(type: "bit", nullable: false)
+                    SparklingDrink = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {

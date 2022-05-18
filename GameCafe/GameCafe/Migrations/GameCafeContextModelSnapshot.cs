@@ -102,7 +102,7 @@ namespace GameCafe.Migrations
                     b.Property<double>("Volume")
                         .HasColumnType("float");
 
-                    b.Property<bool>("isAlcohol")
+                    b.Property<bool>("Sparkling")
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
@@ -230,7 +230,7 @@ namespace GameCafe.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsAlcoholDrink")
+                    b.Property<bool>("SparklingDrink")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsDrink")

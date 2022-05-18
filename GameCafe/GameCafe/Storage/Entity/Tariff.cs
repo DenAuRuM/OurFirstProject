@@ -10,6 +10,6 @@
         public string DayTime { get; set; }
         public bool IsSnacks { get; set; }
         public bool IsDrink { get; set; } 
-        public bool IsAlcoholDrink { get; set; }
+        public bool SparklingDrink { get; set; }
     }
 }

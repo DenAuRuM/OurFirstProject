@@ -6,6 +6,6 @@
         public string Name { get; set; }
         public int Price { get; set; }
         public double Volume { get; set; }
-        public bool isAlcohol { get; set; }
+        public bool Sparkling { get; set; }
     }
 }
