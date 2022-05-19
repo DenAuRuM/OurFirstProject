@@ -1,0 +1,11 @@
+﻿Данные
+@model IEnumerable<GameCafe.Storage.Entity.Book>
+@{
+    foreach (var item in Model)
+    {
+        <br>
+        @item.Name    @item.Author   @item.Type
+        <br/>
+
+    }
+}
