@@ -1,8 +1,27 @@
 ﻿@model IEnumerable<GameCafe.Storage.Entity.Review>
-Спасибо за отзыв!
+
+
+<body class="shared_design">
+    <img 
+    style="margin-bottom:64px;width:500px;    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;"
+    class="inLogo" 
+    src="img/review.png"
+    >
 @{
+
     foreach (var item in Model)
     {
-        <br>
-        @item.Text
-    } }
+    <div class="element-animation">
+        <div class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="card-text">@item.Text</div>
+                <div class="card-title">@item.Author</div>
+            </div>
+        </div>
+    </div>
+    }
+}
+</body>

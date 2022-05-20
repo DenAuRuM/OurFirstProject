@@ -1,8 +1,8 @@
 ﻿@model IEnumerable<GameCafe.Storage.Entity.Tariff>
 @{
-    ViewData["Title"] = "GeekRoad";
+    ViewData["Title"] = "Главная";
 }
-<body class="homebody">
+<body class="shared_design">
 
 <div class="wrap">
  
@@ -12,72 +12,198 @@
   </div>
 
   <div class="element-animation">
-        <div class="head_text">
+        <div class="head_text" style="margin-top:100px">
              <span>Лучшие анти-кафе в Москве!</span>
         </div>
   </div>
-    <div class="element-animation">
+  <div class="element-animation">
         <div class="head_text" style="margin-top:64px">
              <span>Тарифы</span>
         </div>
   </div>
-        @{
-            foreach (var item in Model)
-            {
+    @{
+        foreach (var item in Model)
+        {
                         <div class="element-animation">
-                            <div class="card" style="width: 100%;">
-                              <img src="@item.Picture" class="card-img-top" alt="">
-                              <div class="card-body">
+                            <div class="card" style="width: 100%">
+                                <img src="@item.Picture" class="card-img-top" alt="">
+                                <div class="card-body">
                                 <h5 class="card-title">@item.Name</h5>
                                 <p class="card-text">@item.Description</p>
-                              </div>
-                              <ul class="list-group list-group-flush">
+                                </div>
+                                <ul class="list-group list-group-flush">
                                 <li class="list-group-item">@item.Price</li>
-                                <li class="list-group-item">@item.Length</li>
-                                <li class="list-group-item">@item.DayTime</li>
-                            @if (@item.IsSnacks == true)
-                            {
-                                <li class="list-group-item">Есть закуски!</li>
-                            }
-                             @if (@item.IsDrink == true)
-                            {
-                                <li class="list-group-item">Есть напитки!</li>
-                            }
-                             @if (@item.IsAlcoholDrink == true)
-                            {
-                                <li class="list-group-item">Есть алкогольные напитки!</li>
-                            }
-                              </ul>
-                          </div>
+                                <li class="list-group-item">@item.Length (@item.DayTime)</li>
+                                @if (@item.IsSnacks == true)
+                        {
+                                       <li class="list-group-item">Есть закуски!</li>
+                        }
+                                    @if (@item.IsDrink == true)
+                        {
+                                        <li class="list-group-item">Есть напитки!</li>
+                        }
+                                    @if (@item.IsAlcoholDrink == true)
+                        {
+                                         <li class="list-group-item">Есть алкогольные напитки!</li>
+                        }
+                                </ul>
+                            </div>
 
-              </div>
-      }
-  }
+                        </div>
+        }
+    }
 
-        <div class="element-animation">
-            <div class="card mb-3" style="width: 100%;margin-top:500px">
+  <div class="element-animation">
+        <div class="head_text" style="margin-top:64px">
+             <span>Готовы повеселиться?</span>
+        </div>
+        <div class="visit">
+        
+                 <a class="navbar-brand" asp-area="" asp-controller="Place" asp-action="Index">
+                                            <img src="img/go.png">
+                 </a>
+        </div>
+  </div>
+
+  <div class="element-animation">
+        <div class="head_text" style="margin-top:64px">
+             <span>У нас есть:</span>
+        </div>
+  </div>
+
+      <div class="element-animation">
+            <div class="card mb-3" style="width: 100%;margin-top:100px">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="img/homepage/games.jpg" style="height:400px;width:400px" class="img-fluid rounded-start" alt="...">
+                  <img src="img/homepage/game.jpg" style="height:311.333px;width:311.333px" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
                     <h5 class="card-title">Игры</h5>
-                    <p class="card-text">Самые мощные компьютеры и консоли для самых требовательных игр!</p>
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" Cус>
-                        </a>
+                    <p class="card-text">Самые мощные компьютеры для самых требовательных игр!</p>
                   </div>
                 </div>
               </div>
             </div>
-      </div>
-        <div class="element-animation">
-           <div class="element-big" style="background-color: red"></div>
-      </div>
-        <div class="element-animation">
-           <div class="element-big" style="background-color: red"></div>
+             <a class="navbar-brand" asp-area="" asp-controller="Videogame" asp-action="Index">
+                                        <img class="arrow" src="img/arrow.png">
+             </a>
       </div>
 
+            <div class="element-animation">
+            <div class="card mb-3" style="width: 100%;margin-top:100px">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="img/homepage/boardgames.jpeg" style="height:311.333px;width:311.333px" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Настольные игры</h5>
+                    <p class="card-text">От "Немезиды" до всех изданий "Подземелья и Драконы"</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+             <a class="navbar-brand" asp-area="" asp-controller="Boardgame" asp-action="Index">
+                                        <img class="arrow" src="img/arrow.png">
+             </a>
+      </div>
+
+      <div class="element-animation">
+            <div class="card mb-3" style="width: 100%;margin-top:100px">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="img/homepage/movies.jpg" style="height:311.333px;width:311.333px" class="img-fluid rounded-start" alt="Изображение отсутствует">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Фильмы</h5>
+                    <p class="card-text">У нас есть даже то, что ещё не идет в кинотеатрах!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+             <a class="navbar-brand" asp-area="" asp-controller="Movie" asp-action="Index">
+                                        <img class="arrow" src="img/arrow.png">
+             </a>
+      </div>
+
+      <div class="element-animation">
+            <div class="card mb-3" style="width: 100%;margin-top:100px">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="img/homepage/books.jpg" style="height:311.333px;width:311.333px" class="img-fluid rounded-start" alt="Изображение отсутствует">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Книги</h5>
+                    <p class="card-text">Книги, комиксы, манга - у нас есть всё!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+             <a class="navbar-brand" asp-area="" asp-controller="Book" asp-action="Index">
+                                        <img class="arrow" src="img/arrow.png">
+             </a>
+      </div>
+
+      <div class="element-animation">
+            <div class="card mb-3" style="width: 100%;margin-top:100px">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="img/homepage/drinks.jpg" style="height:311.333px;width:311.333px" class="img-fluid rounded-start" alt="Изображение отсутствует">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Напитки</h5>
+                    <p class="card-text">Молочные коктейли, газировка, чай и не только 😏</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+             <a class="navbar-brand" asp-area="" asp-controller="Drink" asp-action="Index">
+                                        <img class="arrow" src="img/arrow.png">
+             </a>
+      </div>
+
+      <div class="element-animation">
+            <div class="card mb-3" style="width: 100%;margin-top:100px">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="img/homepage/snacks.jpg" style="height:311.333px;width:311.333px" class="img-fluid rounded-start" alt="Изображение отсутствует">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Закуски</h5>
+                    <p class="card-text">Не бойтесь - голодными вы не останетесь!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+             <a class="navbar-brand" asp-area="" asp-controller="Snack" asp-action="Index">
+                                        <img class="arrow" src="img/arrow.png">
+             </a>
+      </div>
+
+      <div class="element-animation">
+            <div class="head_text" style="margin-top:64px">
+                <div style="margin-top:150px"></div>
+                 <span>Уже посещали GeekRoad?</span>
+            <div class="visit">
+                     <a class="navbar-brand" asp-area="" asp-controller="Review" asp-action="Create">
+                         <span style="color:white;font-size:50px"> <u>Оставьте отзыв и получите скидку 30%</u></span>
+                     </a>
+            </div>
+            </div>
+
+            <div class="visit">
+        
+                     <a class="navbar-brand" asp-area="" asp-controller="Review" asp-action="Index">
+                                                <img src="img/review.png">
+                     </a>
+            </div>
+
+      </div>
 
     </div>
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wM+LM2RgU0ymtQhdLEYzBBzK+JjZZMpcKQW43voO851wmEUa2A2hjwHuMKjd9Tp0EZfpKQ4vdQ+Dwc2kdi0dKw==",
+  "dgSpecHash": "j9Sp81mxFy2EeCxE6xDaRJAI9r/dr2DZ7yVNAj3+3wZsVTZepLocvcYw+UPSY6terSUmbJIeqrWGHju/ebAimg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Андрей\\Source\\Repos\\OurFirstProject\\GameCafe\\GameCafe.csproj",
+  "projectFilePath": "C:\\Users\\Андрей\\source\\repos\\OurFirstProject\\GameCafe\\GameCafe.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Андрей\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Андрей\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

@@ -1,30 +1,27 @@
 ﻿@model GameCafe.Storage.Entity.Review
 
 @{
-    ViewData["Title"] = "Добавление комментария";
+    ViewData["Title"] = "Оставить отзыв";
 }
 
+<body class="shared_design">
+        <div class="head_text">
+             <span>Добавить отзыв</span>
+        </div>
 <form asp-action="Create" style="width:80%;margin-top:5%;margin-left:10%;">
     <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Автор</label>
-        <input asp-for="Author" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Айзек Азимов" name="Author">
+        <input required aria-required="true" asp-for="Author" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ваше имя" name="Author">
 
     </div>
 
     <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Название</label>
-        <input asp-for="Text" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Основание" name="Text">
+        <input required aria-required="true" asp-for="Text" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Отзыв" name="Text">
     </div>
 
-    
-
-    
-    <button class="btn btn-primary" value="Create" type="submit">Добавить книгу</button>
+    <input class="arrow" type="image" style="float:left" value="Create" typeof="Submit" src="/img/arrow.png" />
+    <div class="head_text" style="margin-top:64px;font-size:30px;">
+        <span>Упомяните об оставленном отзыве при следующем оформлении, и обязательно получите скидку!</span>
+        </div>
 </form>
-@*@{
-    foreach (var item in Model.Text)
-    {
-        @Model.Text
-    } }*@
 
-
+</body>
