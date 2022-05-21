@@ -1,5 +1,32 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@model IEnumerable<GameCafe.Storage.Entity.Videogame>
+
+
+<body class="shared_design">
+    <img 
+    style="margin-bottom:64px;width:500px;    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;"
+    class="inLogo" 
+    src="img/splashes/games.png"
+    >
+    @{
+            foreach (var item in Model)
+            {
+                                <div class="submenu_card">
+                                        <div class="card" style="width: 100%">
+                                            <img src="@item.Picture" class="card-img-top" alt="">
+                                            <div class="card-body">
+                                            <h5 class="card-title">@item.Id</h5>
+                                            </div>
+                                            <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">@item.Description</li>
+                                            <li class="list-group-item">@item.Id</li>
+                                            <li class="list-group-item">Количество игроков: @item.PlayersAmount</li>
+
+                                            </ul>
+                                        </div>
+                                </div>
+            }
 }
+</body>

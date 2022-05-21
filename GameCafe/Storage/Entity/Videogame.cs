@@ -7,6 +7,8 @@
         public string Picture { get; set; }
         public string Description { get; set; }
         public string PlayersAmount { get; set; }
+        public int? VideoGameGenreId { get; set; }
+        public VideoGameGenre VideoGameGenre { get; set; }
 
     }
 }

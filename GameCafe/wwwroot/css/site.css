@@ -132,3 +132,11 @@ body {
     background-color: white;
     font-family: Bombardier;
 }
+
+.submenu_card {
+    margin-bottom:42px;
+    font-size: 42px;
+    background-color: white;
+    box-shadow: #ff00af 3px 0px 0px, #4de8f4 0px 3px 0px,#ff00af 0px 0px;
+    font-family: Bombardier;
+}
