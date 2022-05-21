@@ -21,7 +21,6 @@
     <Folder Include="Migrations\" />
     <Folder Include="Models\" />
     <Folder Include="Pages\Drink\" />
-    <Folder Include="wwwroot\img\boardgames\" />
     <Folder Include="wwwroot\img\videogames\" />
     <Folder Include="wwwroot\img\books\" />
     <Folder Include="wwwroot\img\drinks\" />

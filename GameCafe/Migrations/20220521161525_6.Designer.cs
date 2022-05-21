@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GameCafe.Migrations
 {
     [DbContext(typeof(GameCafeContext))]
-    [Migration("20220521151635_6")]
+    [Migration("20220521161525_6")]
     partial class _6
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -312,9 +312,6 @@ namespace GameCafe.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("VideogameId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.ToTable("VideoGameGenres");
@@ -322,14 +319,11 @@ namespace GameCafe.Migrations
 
             modelBuilder.Entity("GameCafe.Storage.Entity.Videogame", b =>
                 {
-                    b.HasOne("GameCafe.Storage.Entity.VideoGameGenre", null)
-                        .WithMany("Videogame")
+                    b.HasOne("GameCafe.Storage.Entity.VideoGameGenre", "VideoGameGenre")
+                        .WithMany()
                         .HasForeignKey("VideoGameGenreId");
-                });
 
-            modelBuilder.Entity("GameCafe.Storage.Entity.VideoGameGenre", b =>
-                {
-                    b.Navigation("Videogame");
+                    b.Navigation("VideoGameGenre");
                 });
 #pragma warning restore 612, 618
         }

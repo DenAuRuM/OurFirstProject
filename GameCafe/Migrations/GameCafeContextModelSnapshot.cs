@@ -310,9 +310,6 @@ namespace GameCafe.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("VideogameId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.ToTable("VideoGameGenres");
@@ -320,14 +317,11 @@ namespace GameCafe.Migrations
 
             modelBuilder.Entity("GameCafe.Storage.Entity.Videogame", b =>
                 {
-                    b.HasOne("GameCafe.Storage.Entity.VideoGameGenre", null)
-                        .WithMany("Videogame")
+                    b.HasOne("GameCafe.Storage.Entity.VideoGameGenre", "VideoGameGenre")
+                        .WithMany()
                         .HasForeignKey("VideoGameGenreId");
-                });
 
-            modelBuilder.Entity("GameCafe.Storage.Entity.VideoGameGenre", b =>
-                {
-                    b.Navigation("Videogame");
+                    b.Navigation("VideoGameGenre");
                 });
 #pragma warning restore 612, 618
         }
