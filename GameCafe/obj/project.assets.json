@@ -9869,23 +9869,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lolol\\.nuget\\packages\\": {},
-    "D:\\visual2\\NuGetPackages": {}
+    "C:\\Users\\Андрей\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\visualka\\gg1\\GameCafe\\GameCafe.csproj",
+      "projectUniqueName": "C:\\Users\\Андрей\\source\\repos\\OurFirstProject\\GameCafe\\GameCafe.csproj",
       "projectName": "GameCafe",
-      "projectPath": "G:\\visualka\\gg1\\GameCafe\\GameCafe.csproj",
-      "packagesPath": "C:\\Users\\lolol\\.nuget\\packages\\",
-      "outputPath": "G:\\visualka\\gg1\\GameCafe\\obj\\",
+      "projectPath": "C:\\Users\\Андрей\\source\\repos\\OurFirstProject\\GameCafe\\GameCafe.csproj",
+      "packagesPath": "C:\\Users\\Андрей\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Андрей\\source\\repos\\OurFirstProject\\GameCafe\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\visual2\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\lolol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Андрей\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
