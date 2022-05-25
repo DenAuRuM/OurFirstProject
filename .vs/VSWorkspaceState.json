@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\GameCafe",
-    "\\GameCafe\\Storage",
-    "\\GameCafe\\Storage\\Entity"
+    "\\GameCafe\\Views",
+    "\\GameCafe\\Views\\Shared"
   ],
-  "SelectedNode": "\\GameCafe\\Storage\\Entity\\Videogame.cs",
+  "SelectedNode": "\\GameCafe\\Views\\Shared\\_Layout.cshtml",
   "PreviewInSolutionExplorer": false
 }

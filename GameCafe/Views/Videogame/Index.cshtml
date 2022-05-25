@@ -2,32 +2,30 @@
 using Microsoft.EntityFrameworkCore;
 
 <body class="shared_design">
-    <img 
-    style="margin-bottom:64px;width:500px;    
+    <img style="margin-bottom:64px;width:500px;
     display: block;
     margin-left: auto;
     margin-right: auto;"
-    class="inLogo" 
-    src="img/splashes/games.png"
-    >
+         class="inLogo"
+         src="img/splashes/games.png">
     @{
-    foreach (var item in Model)
+        foreach (var item in Model)
         {
             <div class="submenu_card">
                 <div class="card" style="width: 100%">
                     <img src="@item.Picture" class="card-img-top" alt="">
                     <div class="card-body">
-                    <h5 class="card-title">@item.Name</h5>
+                        <h5 class="card-title">@item.Name</h5>
                     </div>
                     <ul class="list-group list-group-flush">
-                    <li class="list-group-item">@item.Description</li>
+                        <li class="list-group-item">@item.Description</li>
 
-                    @if(item.VideoGameGenre!=null)
-                    {
-                        <li class="list-group-item">@item.VideoGameGenre.Genre</li>   
-                    }
-                       
-                    <li class="list-group-item">Количество игроков: @item.PlayersAmount</li>
+                        @if (item.VideoGameGenre != null)
+                        {
+                            <li class="list-group-item">@item.VideoGameGenre.Genre</li>
+                        }
+
+                        <li class="list-group-item">Количество игроков: @item.PlayersAmount</li>
 
                     </ul>
                 </div>

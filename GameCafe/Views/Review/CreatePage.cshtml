@@ -5,23 +5,23 @@
 }
 
 <body class="shared_design">
-        <div class="head_text">
-             <span>Добавить отзыв</span>
-        </div>
-<form asp-action="Create" style="width:80%;margin-top:5%;margin-left:10%;">
-    <div class="mb-3">
-        <input required aria-required="true" maxlength="35" asp-for="Author" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ваше имя" name="Author">
-
+    <div class="head_text">
+        <span>Добавить отзыв</span>
     </div>
-     
-    <div class="mb-3">
-        <input required aria-required="true" maxlength="280"  asp-for="Text" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Отзыв" name="Text">
-    </div>
+    <form asp-action="Create" style="width:80%;margin-top:5%;margin-left:10%;">
+        <div class="mb-3">
+            <input required aria-required="true" maxlength="35" asp-for="Author" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ваше имя" name="Author">
 
-    <input class="arrow" type="image" style="float:left" value="Create" typeof="Submit" src="/img/arrow.png" />
-    <div class="head_text" style="margin-top:64px;font-size:30px;">
-        <span>Упомяните об оставленном отзыве при следующем оформлении, и обязательно получите скидку!</span>
         </div>
-</form>
+
+        <div class="mb-3">
+            <input required aria-required="true" maxlength="280" asp-for="Text" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Отзыв" name="Text">
+        </div>
+
+        <input class="arrow" type="image" style="float:left" value="Create" typeof="Submit" src="/img/arrow.png" />
+        <div class="head_text" style="margin-top:64px;font-size:30px;">
+            <span>Упомяните об оставленном отзыве при следующем оформлении, и обязательно получите скидку!</span>
+        </div>
+    </form>
 
 </body>

@@ -2,35 +2,33 @@
 
 
 <body class="shared_design">
-    <img 
-    style="margin-bottom:64px;width:500px;    
+    <img style="margin-bottom:64px;width:500px;
     display: block;
     margin-left: auto;
     margin-right: auto;"
-    class="inLogo" 
-    src="img/splashes/drinks.png"
-    >
-@{
+         class="inLogo"
+         src="img/splashes/drinks.png">
+    @{
 
-    foreach (var item in Model)
-    {
+        foreach (var item in Model)
+        {
             <div class="submenu_card">
-                                    <div class="card" style="width: 100%">
-                                    <img src="@item.Picture" class="card-img-top" alt="">
-                                    <div class="card-body">
-                                    <h5 class="card-title">@item.Name</h5>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Цена: @item.Price руб.</li>
-                                    <li class="list-group-item">Объём: @item.Volume мл.</li>   
-                                    @if (@item.isAlcohol == true)
-                                    {
-                                       <li class="list-group-item">Алкогольный!</li>
-                                    }
-                                    </ul>
-                                    </div>
-                                    </div>
+                <div class="card" style="width: 100%">
+                    <img src="@item.Picture" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Name</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Цена: @item.Price руб.</li>
+                        <li class="list-group-item">Объём: @item.Volume мл.</li>
+                        @if (@item.isAlcohol == true)
+                        {
+                            <li class="list-group-item">Алкогольный!</li>
+                        }
+                    </ul>
+                </div>
+            </div>
 
+        }
     }
-}
 </body>

@@ -1,24 +1,25 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
-@font-face{
-    font-family:'Bombardier';
+
+@font-face {
+    font-family: 'Bombardier';
     src: url(/fonts/Bombardier.ttf)
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
 
 .element-big {
@@ -32,11 +33,10 @@ body {
     opacity: 0;
 }
 
-.element-animation.element-show {
-    opacity: 1;
-    transition: opacity 2s;
-
-}
+    .element-animation.element-show {
+        opacity: 1;
+        transition: opacity 2s;
+    }
 
 .shared_design {
     background-image: url(/img/background.jpg);
@@ -46,7 +46,7 @@ body {
 /* Style the header */
 .header {
     padding: 10px 16px;
-    height:250px;
+    height: 250px;
     background: linear-gradient(to bottom,black,transparent)
 }
 
@@ -76,7 +76,7 @@ body {
 
 .arrow {
     opacity: 1;
-    transform:scale(0.5);
+    transform: scale(0.5);
     float: right;
     transition: 0.7s; /* Время эффекта */
 }
@@ -89,8 +89,8 @@ body {
     opacity: 1;
     transform: scale(0.8);
     transition: 1s; /* Время эффекта */
-    position:relative;
-    text-align:center;
+    position: relative;
+    text-align: center;
 }
 
     .visit:hover {
@@ -106,7 +106,7 @@ body {
 
 .head_text {
     text-align: center;
-    font-size:72px;
+    font-size: 72px;
     text-shadow: #ff00af 3px 0px 0px, #ff00af 0px 3px 0px,#ff00af 0px -3px;
     margin: auto;
     color: white;
@@ -114,9 +114,34 @@ body {
 }
 
 .card-title {
-    text-align: center;
+    text-align: left;
     font-size: 72px;
     text-shadow: #ff00af 3px 0px 0px, #ff00af 0px 3px 0px,#ff00af 0px -3px;
+    margin: auto;
+    color: black;
+    font-family: Bombardier;
+}
+
+.card-date {
+    text-align: left;
+    font-size: 32px;
+    margin: auto;
+    color: grey;
+    font-family: Bombardier;
+}
+
+.card-author {
+    text-align: left;
+    font-size: 32px;
+    text-shadow: #ff00af 1px 0px 0px, #ff00af 0px 1px 0px,#ff00af 0px -1px;
+    margin: auto;
+    color: black;
+    font-family: Bombardier;
+}
+
+.card-text {
+    text-align: left;
+    font-size: 42px;
     margin: auto;
     color: black;
     font-family: Bombardier;
@@ -134,7 +159,7 @@ body {
 }
 
 .submenu_card {
-    margin-bottom:42px;
+    margin-bottom: 42px;
     font-size: 42px;
     background-color: white;
     box-shadow: #ff00af 3px 0px 0px, #4de8f4 0px 3px 0px,#ff00af 0px 0px;

@@ -1,6 +1,7 @@
 ﻿using GameCafe.Data;
 using GameCafe.Storage.Entity;
 using Microsoft.EntityFrameworkCore;
+using System.Globalization;
 
 namespace GameCafe.Managers
 {
@@ -14,7 +15,10 @@ namespace GameCafe.Managers
 
         public async Task Create(string text,string name)
         {
-            var review = new Review { Author = name, Text = text };
+            DateTime dt = DateTime.Now;
+            string date;
+            date = dt.ToString("f");
+            var review = new Review { Author = name, Text = text, Date = date };
             _context.Reviews.Add(review);
             await _context.SaveChangesAsync();
         }
