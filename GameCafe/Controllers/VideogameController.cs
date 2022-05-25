@@ -2,6 +2,7 @@
 using GameCafe.Data;
 using GameCafe.Storage.Entity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace GameCafe.Controllers
 {
@@ -17,7 +18,7 @@ namespace GameCafe.Controllers
 
         public ActionResult Index()
         {
-            return View(_context.Videogames.ToList());
+            return View(_context.Videogames.Include(x=>x.VideoGameGenre).ToList());
         }
 
         // GET: VideogameController1/Details/5

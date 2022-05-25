@@ -1,23 +1,27 @@
 ﻿using GameCafe.Data;
 using GameCafe.Storage.Entity;
 using Microsoft.AspNetCore.Mvc;
+using GameCafe.Managers;
 
 namespace GameCafe.Controllers
 {
     public class ReviewController : Controller
     {
-        private readonly GameCafeContext _context;
+        private readonly IReviewManager _manager;
 
-        public ReviewController(GameCafeContext context)
+        public ReviewController(IReviewManager manager)
         {
-            _context = context;
+            _manager = manager;
         }
 
-        
-        public ActionResult Index()
+
+
+        public async Task<IActionResult> Index()
         {
-            return View(_context.Reviews.ToList());
+            var reviews = await _manager.GetAll();
+            return View(reviews);
         }
+
 
         // GET: ReviewController/Details/5
         public ActionResult Details(int id)
@@ -26,24 +30,21 @@ namespace GameCafe.Controllers
         }
 
         // GET: ReviewController/Create
-        public IActionResult Create()
+        public IActionResult CreatePage()
         {
             return View();
         }
 
-        // POST: Users/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
+        [Route("reviews")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Author,Text")] Review review)
         {
-                _context.Reviews.Add(review);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            
-            return View(review);
+            await _manager.Create(review.Text, review.Author);
+            return RedirectToAction(nameof(Index));
         }
+
 
         // GET: ReviewController/Edit/5
         public ActionResult Edit(int id)

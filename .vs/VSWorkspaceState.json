@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\GameCafe",
+    "\\GameCafe\\Storage",
+    "\\GameCafe\\Storage\\Entity"
   ],
-  "SelectedNode": "\\GameCafe.sln",
+  "SelectedNode": "\\GameCafe\\Storage\\Entity\\Videogame.cs",
   "PreviewInSolutionExplorer": false
 }

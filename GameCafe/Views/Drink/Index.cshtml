@@ -14,22 +14,22 @@
 
     foreach (var item in Model)
     {
-        <div class="submenu_card">
-                                <div class="card" style="width: 100%">
+            <div class="submenu_card">
+                                    <div class="card" style="width: 100%">
                                     <img src="@item.Picture" class="card-img-top" alt="">
                                     <div class="card-body">
                                     <h5 class="card-title">@item.Name</h5>
                                     </div>
                                     <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Цена: @item.Price руб.</li>
-                                    <li class="list-group-item">Объём: @item.Volume мл.</li>
+                                    <li class="list-group-item">Объём: @item.Volume мл.</li>   
                                     @if (@item.isAlcohol == true)
                                     {
-                                        <li class="list-group-item">Алкогольный!</li>
+                                       <li class="list-group-item">Алкогольный!</li>
                                     }
                                     </ul>
-                                </div>
-                                </div>
+                                    </div>
+                                    </div>
 
     }
 }

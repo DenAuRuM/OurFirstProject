@@ -1,6 +1,7 @@
 using GameCafe.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using GameCafe.Managers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<GameCafeContext>();
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddScoped<IReviewManager, ReviewManager>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

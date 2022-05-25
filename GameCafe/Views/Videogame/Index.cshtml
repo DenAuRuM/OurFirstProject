@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<GameCafe.Storage.Entity.Videogame>
-
+using Microsoft.EntityFrameworkCore;
 
 <body class="shared_design">
     <img 
@@ -11,22 +11,27 @@
     src="img/splashes/games.png"
     >
     @{
-            foreach (var item in Model)
-            {
-                                <div class="submenu_card">
-                                        <div class="card" style="width: 100%">
-                                            <img src="@item.Picture" class="card-img-top" alt="">
-                                            <div class="card-body">
-                                            <h5 class="card-title">@item.Name</h5>
-                                            </div>
-                                            <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">@item.Description</li>
-                                            <li class="list-group-item">@item.Id</li>
-                                            <li class="list-group-item">Количество игроков: @item.PlayersAmount</li>
+    foreach (var item in Model)
+        {
+            <div class="submenu_card">
+                <div class="card" style="width: 100%">
+                    <img src="@item.Picture" class="card-img-top" alt="">
+                    <div class="card-body">
+                    <h5 class="card-title">@item.Name</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@item.Description</li>
 
-                                            </ul>
-                                        </div>
-                                </div>
-            }
-}
+                    @if(item.VideoGameGenre!=null)
+                    {
+                        <li class="list-group-item">@item.VideoGameGenre.Genre</li>   
+                    }
+                       
+                    <li class="list-group-item">Количество игроков: @item.PlayersAmount</li>
+
+                    </ul>
+                </div>
+            </div>
+        }
+    }
 </body>

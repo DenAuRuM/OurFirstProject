@@ -10,12 +10,12 @@
         </div>
 <form asp-action="Create" style="width:80%;margin-top:5%;margin-left:10%;">
     <div class="mb-3">
-        <input required aria-required="true" asp-for="Author" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ваше имя" name="Author">
+        <input required aria-required="true" maxlength="35" asp-for="Author" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ваше имя" name="Author">
 
     </div>
-
+     
     <div class="mb-3">
-        <input required aria-required="true" asp-for="Text" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Отзыв" name="Text">
+        <input required aria-required="true" maxlength="280"  asp-for="Text" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Отзыв" name="Text">
     </div>
 
     <input class="arrow" type="image" style="float:left" value="Create" typeof="Submit" src="/img/arrow.png" />
