@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using GameCafe.Data;
+using GameCafe.Managers;
 using GameCafe.Storage.Entity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,17 +9,17 @@ namespace GameCafe.Controllers
 {
     public class VideogameController : Controller
     {
-        private readonly GameCafeContext _context;
+        private readonly IVideogameManager _manager;
 
-        public VideogameController(GameCafeContext context)
+        public VideogameController(IVideogameManager manager)
         {
-            _context = context;
+            _manager = manager;
         }
 
-
-        public ActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View(_context.Videogames.Include(x=>x.VideoGameGenre).ToList());
+            var games = await _manager.GetAll();
+            return View(games);
         }
 
         // GET: VideogameController1/Details/5

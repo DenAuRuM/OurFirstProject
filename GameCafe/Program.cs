@@ -15,8 +15,21 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<GameCafeContext>();
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddScoped<IBoardGameManager, BoardGameManager>();
 builder.Services.AddScoped<IReviewManager, ReviewManager>();
+builder.Services.AddScoped<IBookManager, BookManager>();
+builder.Services.AddScoped<IDrinkManager, DrinkManager>();
+builder.Services.AddScoped<IMovieManager, MovieManager>();
+builder.Services.AddScoped<IPlaceManager, PlaceManager>();
+builder.Services.AddScoped<ISnackManager, SnackManager>();
+builder.Services.AddScoped<ITariffManager, TariffManager>();
+builder.Services.AddScoped<IVideogameManager, VideogameManager>();
+
 var app = builder.Build();
+
+
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

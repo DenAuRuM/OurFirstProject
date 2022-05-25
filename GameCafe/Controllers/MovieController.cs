@@ -1,27 +1,29 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using GameCafe.Data;
+using GameCafe.Managers;
 using GameCafe.Storage.Entity;
 
 namespace GameCafe.Controllers
 {
     public class MovieController : Controller
     {
-    private readonly GameCafeContext _context;
+        private readonly IMovieManager _manager;
 
-    public MovieController(GameCafeContext context)
-    {
-        _context = context;
-    }
+        public MovieController(IMovieManager manager)
+        {
+            _manager = manager;
+        }
 
-    // GET: MovieController
-    public ActionResult Index()
-    {
-        return View(_context.Movies.ToList());
-    }
 
-    // GET: MovieController/Details/5
-    public ActionResult Details(int id)
+        public async Task<IActionResult> Index()
+        {
+            var Movies = await _manager.GetAll();
+            return View(Movies);
+        }
+
+        // GET: MovieController/Details/5
+        public ActionResult Details(int id)
         {
             return View();
         }

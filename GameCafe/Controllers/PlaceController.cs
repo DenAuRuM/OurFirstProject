@@ -1,23 +1,25 @@
 ﻿using Microsoft.AspNetCore.Http;
 using GameCafe.Data;
 using GameCafe.Storage.Entity;
+using GameCafe.Managers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GameCafe.Controllers
 {
     public class PlaceController : Controller
     {
-        private readonly GameCafeContext _context;
+        private readonly IPlaceManager _manager;
 
-        public PlaceController(GameCafeContext context)
+        public PlaceController(IPlaceManager manager)
         {
-            _context = context;
+            _manager = manager;
         }
 
-        // GET: ReviewController
-        public ActionResult Index()
+
+        public async Task<IActionResult> Index()
         {
-            return View(_context.Places.ToList());
+            var places = await _manager.GetAll();
+            return View(places);
         }
 
         // GET: PlaceController/Create

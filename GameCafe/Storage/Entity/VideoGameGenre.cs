@@ -7,11 +7,6 @@ namespace GameCafe.Storage.Entity
         [Key]
         public int Id { get; set; }
         public string Genre { get; set; }
-        public IList<Videogame> Videogames { get; set; }
 
-        public VideoGameGenre()
-        {
-            Videogames = new List<Videogame>(); 
-        }
     }
 }

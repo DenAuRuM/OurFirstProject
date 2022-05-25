@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using GameCafe.Data;
+using GameCafe.Managers;
 using GameCafe.Storage.Entity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,17 +8,18 @@ namespace GameCafe.Controllers
 {
     public class TariffController : Controller
     {
-        private readonly GameCafeContext _context;
+        private readonly ITariffManager _manager;
 
-        public TariffController(GameCafeContext context)
+        public TariffController(ITariffManager manager)
         {
-            _context = context;
+            _manager = manager;
         }
 
 
-        public ActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View(_context.Tariffs.ToList());
+            var Tariffs = await _manager.GetAll();
+            return View(Tariffs);
         }
 
         // GET: TariffController/Details/5

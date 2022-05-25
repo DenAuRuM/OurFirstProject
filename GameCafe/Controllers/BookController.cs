@@ -1,4 +1,5 @@
 ﻿using GameCafe.Data;
+using GameCafe.Managers;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -6,17 +7,18 @@ namespace GameCafe.Controllers
 {
     public class BookController : Controller
     {
-        private readonly GameCafeContext _context;
-        public BookController(GameCafeContext context)
+        private readonly IBookManager _manager;
+        public BookController(IBookManager manager)
         {
-            _context = context;
+            _manager = manager;
         }
 
 
-        // GET: BookController
-        public ActionResult Index()
+
+        public async Task<IActionResult> Index()
         {
-            return View(_context.Books.ToList());
+            var books = await _manager.GetAll();
+            return View(books);
         }
 
         // GET: BookController/Details/5

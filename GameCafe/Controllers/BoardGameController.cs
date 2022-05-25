@@ -1,21 +1,23 @@
 ﻿using GameCafe.Data;
+using GameCafe.Managers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GameCafe.Controllers
 {
     public class BoardGameController : Controller
     {
-        private readonly GameCafeContext _context;
+        private readonly IBoardGameManager _manager;
 
-        public BoardGameController(GameCafeContext context)
+        public BoardGameController(IBoardGameManager manager)
         {
-            _context = context;
+            _manager = manager;
         }
 
-        // GET: BoardGameController
-        public ActionResult Index()
+        
+        public async Task<IActionResult> Index()
         {
-            return View(_context.BoardGames.ToList());
+            var boardgames = await _manager.GetAll();
+            return View(boardgames);
         }
 
         // GET: BoardGameController/Details/5

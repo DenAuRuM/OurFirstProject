@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using GameCafe.Data;
+using GameCafe.Managers;
 using GameCafe.Storage.Entity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,17 +8,18 @@ namespace GameCafe.Controllers
 {
     public class SnackController : Controller
     {
-        private readonly GameCafeContext _context;
+        private readonly ISnackManager _manager;
 
-        public SnackController(GameCafeContext context)
+        public SnackController(ISnackManager manager)
         {
-            _context = context;
+            _manager = manager;
         }
 
 
-        public ActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View(_context.Snacks.ToList());
+            var Snacks = await _manager.GetAll();
+            return View(Snacks);
         }
 
         // GET: SnackController/Details/5

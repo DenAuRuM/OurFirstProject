@@ -1,22 +1,25 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using GameCafe.Data;
+using GameCafe.Managers;
 using GameCafe.Storage.Entity;
 
 namespace GameCafe.Controllers
 {
     public class DrinkController : Controller
     {
-        private readonly GameCafeContext _context;
+        private readonly IDrinkManager _manager;
 
-        public DrinkController(GameCafeContext context)
+        public DrinkController(IDrinkManager manager)
         {
-            _context = context;
+            _manager = manager;
         }
-        // GET: DrinkController
-        public ActionResult Index()
+
+
+        public async Task<IActionResult> Index()
         {
-            return View(_context.Drinks.ToList());
+            var drinks = await _manager.GetAll();
+            return View(drinks);
         }
 
         // GET: DrinkController/Details/5
